@@ -1,0 +1,23 @@
+{
+  "name": "DSA",
+  "version": "1.0.0",
+  "description": "> This is me Aditya Neve, and all of my DSA programs are here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadityaneve/DSA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aadityaneve/DSA/issues"
+  },
+  "homepage": "https://github.com/aadityaneve/DSA#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
