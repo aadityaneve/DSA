@@ -143,3 +143,74 @@ if (process.env.USERNAME === "aneve") {
         process.exit(0);
     });
 }
+
+
+
+
+
+
+/* 
+    Exit the Grid - Editorial
+    Difficulty: Low
+    Prerequisite: 2D Arrays, Implementation
+    Problem Statement:
+    You are given a square matrix, having valuesR, L, U, D, indicating that from the current cell, you can move right, left,up or down by 1 unit, according to the character. You have to find, how many steps does it take for you to exit the grid, which means reach a position beyond the matrix indexes. If you are stuck in the maze, the number of steps will be 0
+
+    Hint:
+    When can you be sure that no element is visited twice
+
+    Short Explaination
+    You are given a square matrix, having valuesR, L, U, D, indicating that from the current cell, you can move right, left,up or down by 1 unit, according to the character. Now, you enter the grid at (0,0) and move according to the character present at that position, and keep a value count indicating the number of steps you have taken to move out of the grid. In case, you reach to a position, which has already been visited, that indicates you are stuck in the matrix, so you should return 0. So, we have to mark the positions that have been visited, so we can use any character other than the four characters given in the input. We continue this, till the time we reach an invalid index, and then print the count.
+
+    Detailed Explanation:
+    You are given a square matrix, having valuesR, L, U, D, indicating that from the current cell, you can move right, left,up or down by 1 unit, according to the character.
+
+    Now, you enter the grid at (0,0) and move according to the character present at that position, and keep a value count indicating the number of steps you have taken to move out of the grid.
+
+    In case, you reach to a position, which has already been visited, that indicates you are stuck in the matrix, so you should return 0.
+
+    So, we have to mark the positions that have been visited, so we can use any character other than the four characters given in the input. So, we useX.
+
+    We traverse the matrix starting from (0,0), and then moving accordingly to the character present at that position. For example, if (i,j) denote the position at current index, then if we move left, so the index becomes (i,j-1), if we move right, then the index becomes (i,j + 1), if we move up, the index becomes (i-1,j), and similarly if we move down, the index becomes (i+1,j)
+
+    It is important to mark a particular position before we move to the next position, hence we update the value at the current index toX, indicating that it is visited
+
+    We continue this iteration, till the time we reach an invalid index or we reach a position already visited, and then print the count.
+
+    Pseudo Code
+    function exitTheGrid(arr){
+            count = 0;
+            i = 0;
+            j = 0;
+            while(i >= 0 && j >= 0 && i < arr.length && j < arr.length){
+                if (arr[i][j] == 'X') return 0;
+                if (arr[i][j] == 'L'){
+                    arr[i][j] = 'X';
+                    j--;
+                }
+                else if (arr[i][j] == 'R'){
+                    arr[i][j] = 'X';
+                    j++;
+                }
+                else if (arr[i][j] == 'U'){
+                    arr[i][j] = 'X';
+                    i--;
+                }
+                else{
+                    arr[i][j] = 'X';
+                    i++;
+                }
+                count++;
+            }
+            return count;
+        }
+
+    Time Complexity
+    In the worst case, we will have to traver the entire matrix, therefore, the time complexity will beO(N^2)
+
+    Space Complexity
+    No extra space is required, therefore, the time complexity will be O(1).
+
+    Alternate Solution:
+    None.
+*/
