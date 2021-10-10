@@ -204,8 +204,8 @@ function runProgram(input) {
 
 }
 if (process.env.USERNAME === "aneve") {
-    runProgram(`10
-    E 3 1
+    runProgram(`15
+    3 E 1
     D
     E 3 1
     E 3 2
@@ -214,7 +214,12 @@ if (process.env.USERNAME === "aneve") {
     D
     E 1 1
     E 1 2
-    E 4 1`);
+    E 4 1
+    D
+    D
+    D
+    D
+    D`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
