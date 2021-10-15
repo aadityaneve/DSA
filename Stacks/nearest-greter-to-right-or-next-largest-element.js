@@ -21,8 +21,8 @@ function nearestGreaterElement(arr) {
         }
         stack.push(arr[i]);
     }
+    console.log(ans.reverse().join(' '));
 
-    console.log(ans);
 }
 
 function runProgram(input) {
