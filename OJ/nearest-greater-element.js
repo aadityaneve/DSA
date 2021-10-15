@@ -79,6 +79,7 @@ function nearestGreaterElement(arr, size) {
 
         i++;
     }
+    // console.log(left);
 
     // Solving for right
     i = size - 1;
@@ -96,6 +97,7 @@ function nearestGreaterElement(arr, size) {
 
         i--;
     }
+    // console.log(right);
 
     // Solving for ans array
     i = 0;
