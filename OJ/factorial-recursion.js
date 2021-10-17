@@ -76,3 +76,58 @@ if (process.env.USERNAME === "aneve") {
         process.exit(0);
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+    Factorial-Recursion
+    Difficulty: Easy
+
+    Prerequisite: Recursion
+
+    Problem Statement:
+
+    Given an Integer, you need to compute the factorial of given number using recursion
+
+    Hint:
+
+    None
+
+    Short Explanation:
+
+    None
+
+    Detailed Explanation:
+
+    if the given integer is 1, simply return 1
+    other wise, take the product of n and return value recursion function by calling with n-1
+    Pseudo code:
+
+    //n: integer
+    function factorial(n)
+        {
+            if (n==1)
+                return 1;
+            return n * factorial(n-1);
+        }
+    Time Complexity:
+
+    totalnfunction calls will be made, so at each and every call one multiplication is happening which is constant time, so like totalnmultiplications will be made, so the time complexity will beo(n).
+
+    Space Complexity:
+
+    For each and every recursive call is going to be present in the call stack of memory, so if you observe approximatelyncalls will be made during the execution of program, hence space complexity will beo(n).
+
+    Alternate Solution:
+
+    None
+*/
