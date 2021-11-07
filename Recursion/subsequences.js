@@ -1,11 +1,30 @@
 function subsequences(arr) {
-
     /**************** IMP ****************
         Are subsequences and subsets same?
         Subset: Same as subsequence except it has empty set
     */
 
-    /* subsequences using recursion    ********** BEST Way *********
+    // it will generate subsequences sequencially  ********* BEST Way *********
+    function getSubsequence(arr, newArr, curr) {
+        /*
+        if(newArr.length != 0){
+            console.log(newArr);
+        }
+        */
+        console.log(newArr);
+        if (curr == arr.length) {
+            return;
+        }
+
+        for (let i = curr; i < arr.length; i++) {
+            newArr.push(arr[i]);
+            getSubsequence(arr, newArr, i + 1);
+            newArr.pop();
+        }
+    }
+    getSubsequence(arr, [], 0);
+
+    /*  subsequences using recursion    ********** BEST Way *********
     function getSubset(arr, newArr, curr) {
         if (curr == arr.length) {
             console.log(newArr);
