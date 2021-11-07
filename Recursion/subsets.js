@@ -21,7 +21,7 @@ function subsets(arr) {
         Subset: Same as subsequence except it has empty set
     */
 
-    // it will generate subsets sequencially
+    // it will generate subsets sequencially  ********* BEST Way *********
     function getSubset(arr, newArr, curr) {
         console.log(newArr);
         if (curr == arr.length) {
