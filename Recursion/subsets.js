@@ -21,7 +21,22 @@ function subsets(arr) {
         Subset: Same as subsequence except it has empty set
     */
 
-    // subsets using recursion
+    // it will generate subsets sequencially
+    function getSubset(arr, newArr, curr) {
+        console.log(newArr);
+        if (curr == arr.length) {
+            return;
+        }
+
+        for (let i = curr; i < arr.length; i++) {
+            newArr.push(arr[i]);
+            getSubset(arr, newArr, i + 1);
+            newArr.pop();
+        }
+    }
+    getSubset(arr, [], 0);
+
+    /* subsets using recursion  ******** BEST Way *********
     function getSubset(arr, newArr, curr) {
         if (curr == arr.length) {
             console.log(newArr);
@@ -32,6 +47,7 @@ function subsets(arr) {
         getSubset(arr, newArr.concat(arr[curr]), curr + 1);
     }
     getSubset(arr, [], 0);
+    */
 
     /* subsets in iterative way
     for (let i = 0; i < arr.length; i++) {
@@ -96,7 +112,7 @@ function runProgram(input) {
     subsets(arr);
 }
 if (process.env.USERNAME === "aneve") {
-    runProgram(`a b c d`);
+    runProgram(`1 2 3`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
