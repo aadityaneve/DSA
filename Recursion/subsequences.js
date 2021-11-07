@@ -1,12 +1,9 @@
 function subsequences(arr) {
-    //   var arr = [];
-    //   arr += 5;
-    //   console.log(arr);
 
-    //     var newArr = [];
-    //   console.log(newArr.concat(1));
-    //   console.log(newArr)
-
+    /**************** IMP ****************
+        Are subsequences and subsets same?
+        Subset: Same as subsequence except it has empty set
+    */
 
     /* subsequences using recursion    ********** BEST Way *********
     function getSubset(arr, newArr, curr) {
