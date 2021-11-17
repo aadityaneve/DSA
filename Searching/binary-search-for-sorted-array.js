@@ -1,10 +1,13 @@
 function binarySearchForSortedArray(arr) {
     // console.log(arr)
-    key = 10;
+    key = 8;
     low = 0;
     high = arr.length;
     while (low <= high) {
-        let mid = (low + high) / 2;
+        // let mid = (low + high) / 2;
+
+        // Best way to calculate mid : 
+        let mid = low + (high-low)/2;
         if (arr[mid] === key) {
             return [true, mid];
         } else if (arr[mid] > key) {
