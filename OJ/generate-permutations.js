@@ -85,7 +85,7 @@ function runProgram(input) {
     input = input.trim().split('\n');
     var line = 0;
     var size = +input[0];
-    var arr = input[1].trim().split(' ').map(Number);
+    var arr = input[1].trim().split(' ');
     generatePermutations(arr, size);
 }
 if (process.env.USERNAME === "aneve") {

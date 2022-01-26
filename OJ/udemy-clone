@@ -1,0 +1,78 @@
+Udemy-FrontEnd:
+	SignIn SignUP
+	Courses
+	Category
+	Video's
+	Chat
+	
+	Part-II: 
+		Teach On Udemy
+
+Udemy-Server
+	SignIn SignUP
+	OAuth - Passport
+	Tags - Category
+	AWS S3 - Video's / Data
+	Chat
+	
+
+	course_card_collection:
+		course_card: {
+			_id: course_details,
+			
+			image: String,
+			title: String,
+			author: String,
+			rating: Number,
+			students_count: Number,
+			price: Number,
+			description: [],
+		}	
+	
+	course_details_collection:
+		course_details: {
+			title: String,
+			image: [image_links],
+			short_desc: String,
+			students_count: Number,
+			price: Number,
+			authers: [authers_id],
+			videos: [s3 links],
+			description: [only description],
+			description1: [what you will learn],
+			description2: [this course includes],
+			rating: Number,
+			comments: [],
+			requirements: [],		
+		}
+		
+	user-collection:
+		user: {
+			first_name: String,
+			last_name: String,
+			photo: link,
+			email: String,
+			password: String,
+		}
+		
+	
+	cart-collection:	
+		cart: {
+				_id: user_id
+				course: [course_id],				
+			}
+			
+	wishlist-collection:	
+		wishlist: {
+				_id: user_id
+				course: [course_id],				
+			}
+			
+	bought-collection:	
+		bought: {
+				_id: user_id
+				course: [course_id],				
+			}
+		
+	
+	

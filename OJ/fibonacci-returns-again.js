@@ -29,7 +29,7 @@ function runProgram(input) {
     fibonacciReturnsAgain(+input);
 }
 if (process.env.USERNAME === "aneve") {
-    runProgram(`50`);
+    runProgram(`10`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

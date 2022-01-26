@@ -69,7 +69,7 @@ function runProgram(input) {
     subsequences(arr);
 }
 if (process.env.USERNAME === "aneve") {
-    runProgram(`a b c`);
+    runProgram(`1 5 7`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

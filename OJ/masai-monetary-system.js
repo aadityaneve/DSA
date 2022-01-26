@@ -1,7 +1,7 @@
 function masaiMonetarySystem(number) {
     let dp = [];
     function maxValue(number) {
-        if (number <= 7) {
+        if (number <= 2) {
             return 0;
         }
         if (dp[number] != undefined) {
@@ -17,6 +17,7 @@ function masaiMonetarySystem(number) {
         return dp[number];
     }
     console.log(maxValue(number));
+
     // console.log(dp);
 
     /* ********** Used Recursion * Not Efficient * Gives TLE ******
@@ -39,13 +40,13 @@ function masaiMonetarySystem(number) {
 
 function runProgram(input) {
     input = input.trim().split('\n');
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < input.length; i++) {
         masaiMonetarySystem(+input[i]);
     }
 }
 if (process.env.USERNAME === 'aneve') {
-    runProgram(`50
-    2`);
+    runProgram(`504
+    354`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding('ascii');

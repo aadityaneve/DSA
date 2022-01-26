@@ -1,30 +1,12 @@
-function masaiUniqueness(string) {
-
-    // let object = {}
-
-    let flag = 0;
-    for(let i = 0; i < string.length; i++){
-        for(let j = i+1; j < string.length; j++){
-            if(string[i] === string[j]){
-                flag=1;
-            }
-        }
-    }
-    if(flag === 0){
-        console.log("Unique")
-    }else {
-        console.log("No")
-    }
-    
-
-}
-
 function runProgram(input) {
-    input = input.trim().split("");
-    masaiUniqueness(input);
+    input = input.trim().split("\n");
+    var [K, size] = input[0].trim().split(" ").map(Number);
+    var arr = input[1].trim().split(" ").map(Number);
+    masaiPackersAndMovers(arr, K);
 }
 if (process.env.USERNAME === "aneve") {
-    runProgram(`masai`);
+    runProgram(`3 3
+    1 2 3`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

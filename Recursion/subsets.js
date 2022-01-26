@@ -112,7 +112,7 @@ function runProgram(input) {
     subsets(arr);
 }
 if (process.env.USERNAME === "aneve") {
-    runProgram(`1 2 3 4`);
+    runProgram(`A B C`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

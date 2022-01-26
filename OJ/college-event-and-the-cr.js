@@ -1,5 +1,3 @@
-console.log('\n\n\n\n\n\n');
-
 class Graph {
     constructor() {
         this.element = new Map();
@@ -123,18 +121,43 @@ class Graph {
     }
 }
 
-let graph = new Graph();
+function runProgram(input) {
+    input = input.trim().split('\n');
+    let testCases = +input[0];
+    let lines = 0;
 
-graph.addEdge(0, 2);
-graph.addEdge(0, 1);
-graph.addEdge(1, 3);
-graph.addEdge(2, 5);
+    for (let i = 0; i < testCases; i++) {
+        let n = +input[++lines];
+        let graph = new Graph();
+        for (let j = 0; j < n; j++) {
+            let [x, y] = input[++lines].trim().split(' ');
 
-// console.log(graph);
-
-// console.log('Number Of Edges: ', graph.numberOfEdges());
-// console.log('Number Of Vertices: ', graph.numberOfVertices());
-
-// graph.dfs(0);
-
-graph.bfs(0);
+            graph.addEdge(x, y);
+        }
+        console.log(graph);
+    }
+}
+if (process.env.USERNAME === 'aneve') {
+    runProgram(`1
+    2
+    0 1
+    1 2
+    `);
+} else {
+    process.stdin.resume();
+    process.stdin.setEncoding('ascii');
+    let read = '';
+    process.stdin.on('data', function (input) {
+        read += input;
+    });
+    process.stdin.on('end', function () {
+        read = read.replace(/\n$/, '');
+        read = read.replace(/\n$/, '');
+        runProgram(read);
+    });
+    process.on('SIGINT', function () {
+        read = read.replace(/\n$/, '');
+        runProgram(read);
+        process.exit(0);
+    });
+}

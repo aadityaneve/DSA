@@ -77,7 +77,7 @@ function problemOfPlagiarism(number, left, right) {
     let count = 0;
     function getPermutations(arr, curr) {
         if (curr == arr.length) {
-            // console.log(arr);
+            console.log(arr);
             let sum = 0;
             for (let i = left; i <= right; i++) {
                 sum += arr[i];
